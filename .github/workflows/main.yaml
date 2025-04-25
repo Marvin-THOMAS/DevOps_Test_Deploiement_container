@@ -34,14 +34,4 @@ jobs:
           push: true
           tags: nyak1937/ton-image:latest
 
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Deploy to Azure Web App
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: 'MyWebApi'
-          images: 'nyak1937/MyWebApi:latest'
 
